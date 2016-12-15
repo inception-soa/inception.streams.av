@@ -1,0 +1,55 @@
+{
+  "name": "inception.streams.av",
+  "version": "1.0.0",
+  "description": "Audio/video media codec streams",
+  "keywords": [
+    "inception",
+    "stream",
+    "multipart"
+  ],
+  "homepage": "https://github.com/inception-soa/inception.streams.av#readme",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/inception-soa/inception.streams.av.git"
+  },
+  "bugs": {
+    "url": "git://github.com/inception-soa/inception.streams.av/issues"
+  },
+  "author": "Anand Suresh",
+  "contributors": [
+    {
+      "name": "Anand Suresh",
+      "url": "https://github.com/anandsuresh",
+      "email": "anandsuresh@gmail.com"
+		}
+	],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "engines": {
+    "node": "^4.0.0"
+  },
+  "scripts": {
+    "lint": "eslint lib/**/*.js spec/**/*.js",
+    "pretest": "npm install && npm run lint",
+    "test": "mocha --ui bdd --reporter spec --recursive spec",
+    "coverage": "NODE_ENV=test istanbul cover -x \"spec/**\" _mocha -- --ui bdd --reporter spec --recursive spec && open coverage/lcov-report/index.html > /dev/null 2>&1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.12.0",
+    "eslint-plugin-mocha": "^4.7.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-config-inception": "inception-soa/eslint-config-inception",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "nan": "^2.4.0",
+    "node-gyp": "^3.4.0",
+    "sinon": "^1.17.6"
+  },
+  "dependencies": {
+    "inception.debug": "inception-soa/inception.debug",
+    "inception.primitives": "inception-soa/inception.primitives",
+    "bindings": "^1.2.1",
+    "lodash": "^4.17.2"
+  }
+}
